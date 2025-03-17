@@ -9,7 +9,14 @@ package main
 
 import "fmt"
 
-func main () {
-	// Here goes your code
-	fmt.Printf("...")
+func main() {
+	firstName := ""
+	lastName := ""
+	fmt.Println("What is your first name?")
+	fmt.Scanln(&firstName)
+
+	fmt.Println("What is your last name?")
+	fmt.Scanln(&lastName)
+
+	fmt.Printf("Hello, %s %s\n", firstName, lastName)
 }

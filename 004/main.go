@@ -4,8 +4,11 @@
 
 package main
 
+import "fmt"
+
 func main() {
 	// Here goes your code
-	var string1, string2 string
-	// ...
+	helloWorld, itsmemario := "Hello World", "It's me Mario"
+
+	fmt.Println(helloWorld + ", " + itsmemario)
 }

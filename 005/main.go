@@ -6,8 +6,11 @@ package main
 
 import "fmt"
 
-func main () {
+func main() {
 	// Here goes your code
-	var string1 string
+	var string1 string = "String"
+
+	fmt.Println((string1[0]))
+	fmt.Println(string(string1[0]))
 	// ...
 }

@@ -4,7 +4,8 @@ package main
 
 import "fmt"
 
-func main () {
-	// Here goes your code
-	fmt.Printf("...")
+func main() {
+
+	arr := [5]string{"Jamie", "Becca"}
+	fmt.Println(arr)
 }

@@ -5,7 +5,9 @@ package main
 
 import "fmt"
 
-func main () {
-	// Here goes your code
-	fmt.Printf("...")
+func main() {
+
+	arr := [10]int8{1, 2, 3, 4, 5, 6, 7, 8, 9}
+	fmt.Println(arr)
+
 }
