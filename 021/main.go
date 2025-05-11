@@ -8,7 +8,14 @@ package main
 
 import "fmt"
 
-func main () {
-	// Your code goes here
-	
+func main() {
+
+	aMap := make(map[int]string)
+
+	aMap[1] = "A"
+	aMap[2] = "B"
+	aMap[3] = "C"
+
+	fmt.Println(aMap)
+
 }
