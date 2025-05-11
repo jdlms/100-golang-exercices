@@ -3,10 +3,19 @@
 
 package main
 
-import "os"
+import (
+	"fmt"
+	"os"
+)
 
+func main() {
 
-func main () {
-	// Here goes your code
-	
+	file, err := os.Create("countries")
+	if err != nil {
+		fmt.Printf("Error %s", err)
+	}
+
+	defer file.Close()
+
+	file.WriteString("Peru\nFrance\nEcuador\nGermany\nCanada")
 }

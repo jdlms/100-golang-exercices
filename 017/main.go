@@ -3,10 +3,25 @@
 
 package main
 
-import "fmt"
-import "io/ioutil"
+import (
+	"fmt"
+	"io"
+	"os"
+)
 
-func main () {
-	// Here goes your code
-	
+func main() {
+	file, err := os.Open("./read.go")
+	if err != nil {
+		fmt.Println("Error opening file:", err)
+		return
+	}
+	defer file.Close()
+
+	data, err := io.ReadAll(file)
+	if err != nil {
+		fmt.Println("Error reading file:", err)
+		return
+	}
+
+	fmt.Println(string(data))
 }

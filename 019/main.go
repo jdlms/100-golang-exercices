@@ -3,12 +3,23 @@
 
 package main
 
-import "os"
+import (
+	"fmt"
+	"os"
+)
 
-
-func main () {
+func main() {
 	var src, dest string
 	src = "name1.txt"
-	// Here goes your code
 
+	_, err := os.Create(src)
+	if err != nil {
+		fmt.Printf("Error %s", err)
+	}
+	dest = "renamed-file.txt"
+
+	err = os.Rename(src, dest)
+	if err != nil {
+		fmt.Printf("Error renaming: %s", err)
+	}
 }
